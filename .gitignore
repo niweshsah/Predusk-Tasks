@@ -3,3 +3,11 @@
 
 __pycache__
 # *.yml
+
+*.pyc
+venv/
+env/
+.env
+*.db
+*.sqlite
+.DS_Store

@@ -14,9 +14,8 @@ def initialize_vectorstore():
     Creates the index if it doesn't exist.
     """
     try:
-        pc = Pinecone(api_key=Config.PINECONE_API_KEY)
+        pc = Pinecone(api_key=Config.PINECONE_API_KEY) 
         
-        # Check if index exists, create if not
         existing_indexes = [i.name for i in pc.list_indexes()]
         
         if Config.INDEX_NAME not in existing_indexes:
@@ -26,7 +25,6 @@ def initialize_vectorstore():
                 metric="cosine",
                 spec=ServerlessSpec(cloud=Config.CLOUD_PROVIDER, region=Config.REGION)
             )
-            # Wait a moment for index initialization
             time.sleep(1)
 
         embeddings = get_embeddings()

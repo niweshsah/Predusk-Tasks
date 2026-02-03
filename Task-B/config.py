@@ -13,7 +13,7 @@ class Config:
 
     # Pinecone Settings
     INDEX_NAME = "mini-rag-index"
-    NAMESPACE = "demo-namespace"
+    NAMESPACE = "niwesh-namespace"
     EMBEDDING_DIMENSION = 768
     CLOUD_PROVIDER = "aws"
     REGION = "us-east-1"
